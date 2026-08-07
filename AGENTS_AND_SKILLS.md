@@ -16,6 +16,10 @@ This document details the autonomous agent architecture and custom skills implem
   * Evaluates complex multi-step user prompts.
   * Dynamically selects and invokes required skills (tools).
   * Processes tool execution outputs and feeds them back into the conversation context for follow-up actions.
+  * Evaluates complex multi-step user prompts.
+  * Dynamically selects and invokes required skills (tools).
+  * Processes tool execution outputs and feeds them back into the conversation context for follow-up actions.
+  * **Native Computer Vision:** Automatically detects image files (`.png`, `.jpg`, `.jpeg`) passed via the `file:` command and processes them using multi-modal byte parsing for visual Q&A and analysis.
 
 ---
 

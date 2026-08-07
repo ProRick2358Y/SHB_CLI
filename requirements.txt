@@ -3,3 +3,6 @@ google-genai
 beautifulsoup4
 rich
 prompt_toolkit
+pytest
+playwright
+pytest-playwright

@@ -1,0 +1,110 @@
+Don't forget the fact that APIs are not free or forever, update it from time to time.
+You can change the model by editing the variable `model_name` near the top of app.py.
+You can check the rate limits from here:
+https://ai.google.dev/gemini-api/docs/rate-limits
+
+
+
+Clone this Repository:
+
+Linux:
+git clone https://github.com/ProRick2358Y/SHB_CLI && cd SHB_CLI/
+
+Windows:
+git clone https://github.com/ProRick2358Y/SHB_CLI
+cd SHB_CLI
+
+Alternatively, these are the barebone minimum required to be kept in the directory of the Bot, keep them in the root directory:
+.env
+app.py
+constitution.md
+requirements.txt
+
+Don't forget to edit .env.example to .env so that it contains actual API keys.
+
+
+
+For Local Hosting on Linux:
+(This guide is for Debian based OS (tested on Ubuntu 26.04) but has been tested on RHEL based OSes (tested on Fedora 44) using `dnf`, and is sure to work on other distros with equivalent commands)
+
+Install Virtual Environment Tools for Python 3.10+:
+sudo apt install python3 python3-venv python3-pip -y
+
+Choose the directory of the Bot.
+
+Create Virtual Environment:
+python3 -m venv venv
+
+Activate Virtual Environment:
+source venv/bin/activate
+
+Install Dependencies:
+pip install -r requirements.txt
+
+Run the Bot:
+python3 app.py
+
+You can Stop Hosting using the `exit` command or Ctrl + C.
+
+Deactivate Virtual Environment:
+deactivate
+
+To delete the Virtual Environment:
+Delete the Folder named venv from the directory all the source files were kept.
+
+
+
+For Local Hosting on Windows:
+(Tested on Windows 11 25H2, and is sure to work with other supported versions)
+
+Install Python 3.10+ from the [Python Official Website](https://www.python.org/) or the Microsoft Store. During installation, check the box "Add Python to PATH."
+
+Open Command Prompt or PowerShell in your project folder.
+
+Create Virtual Environment:
+python -m venv venv
+
+Activate Virtual Environment (PowerShell):
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+.\venv\Scripts\Activate.ps1
+
+Activate Virtual Environment (Command Prompt):
+venv\Scripts\activate.bat
+
+Install Dependencies:
+python -m pip install -r requirements.txt
+
+Run the Bot:
+python app.py
+
+You can Stop Hosting using:
+Ctrl + C
+
+
+
+For Local Hosting on Android:
+(Tested on Android 16)
+
+Install Termux.
+
+Enter the following command to give Termux the permission to access the internal storage.
+termux-setup-storage
+
+Skip the Virtual Environment Creation and Activation.
+
+Install the required dependencies:
+pkg update && pkg upgrade
+pkg install binutils python-pip rust build-essential openssl libffi
+pip install --upgrade pip setuptools wheel
+pkg install python-cryptography
+export ANDROID_API_LEVEL=24
+export CARGO_BUILD_TARGET=aarch64-linux-android
+
+Install the Bot's dependencies:
+pip install -r requirements.txt
+
+Go to the Bot's directory, and run the Bot:
+python3 app.py
+
+You can Stop Hosting using:
+Ctrl + C

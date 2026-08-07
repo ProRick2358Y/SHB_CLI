@@ -18,3 +18,10 @@ The AI Agent system provides an autonomous, terminal-based assistant capable of 
 * **So that** it can write code and generate documentation without manual copy-pasting.
 * **Acceptance Criteria**:
   - Given a prompt to "Write a python script," the agent invokes the `edit_file` tool, passes the correct file path and string content, and the file is written to the disk successfully.
+  
+**Story 3: Multi-modal Vision capabilities**
+* **As a** user...
+* **I want** the agent to be able to read and analyze images...
+* **So that** I can pass screenshots, diagrams, or photos via the terminal and get contextual answers.
+* **Acceptance Criteria**:
+  - Given a prompt containing `file: <path_to_image.png>`, the system correctly identifies the MIME type and passes the byte data to the LLM without crashing, returning an accurate description or analysis of the image.
