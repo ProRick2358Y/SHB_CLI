@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "Second-Hand-Bot"
+version = "0.1.0"
+description = ""
+authors = ["ProRick2358Y a.k.a. Souradeep Panda"]
+
+[tool.poetry.dependencies]
+python = "^3.13 "
+google-genai = "^1.0.0"
+python-dotenv = "^1.0.1"
+beautifulsoup4 = "^4.12.3"
+rich = "^15.0.0"
+prompt_toolkit = "^3.0.53"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
