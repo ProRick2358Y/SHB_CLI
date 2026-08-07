@@ -1,6 +1,9 @@
 import os
 import asyncio
-import readline
+try:
+    import readline
+except ImportError:
+    pass  # Windows doesn't need readline.
 import subprocess
 import urllib.request
 from bs4 import BeautifulSoup
@@ -10,6 +13,7 @@ from google.genai import types
 from rich.console import Console
 from rich.markdown import Markdown
 from prompt_toolkit import PromptSession
+model_name = "gemini-3.5-flash"
 
 load_dotenv()
 
@@ -104,7 +108,6 @@ def run_command(command: str) -> str:
         return "USER REJECTED: Command execution was cancelled by the user. Do not re-attempt unless requested."
 
 # --- Configuration ---
-model_name = "gemini-3.5-flash"
 error_message = "My circuits are a bit fried. Try again?"
 
 # Parse keys into a list
@@ -151,13 +154,13 @@ async def main():
         return
 
     print("--- Second Hand Bot (SHB) Terminal Activated ---")
-    print("Type your message. To give access to a file, type 'file: <path/to/file>'. Type 'exit' to quit.\n")
+    print("Type your message. To give access to a file, type 'file: <path/to/file>'. Type 'exit' to quit.\n\033[93m(Press Escape then Enter, or Alt + Enter to send)\033[0m.\n")
 
     session = PromptSession()
 
     while True:
         try:
-            print("\033[92mYou\033[0m (Alt+Enter to send):")
+            print("\033[94mYou:\033[0m")
             user_input = await session.prompt_async("", multiline=True)
             user_input = user_input.strip()
             if not user_input:
