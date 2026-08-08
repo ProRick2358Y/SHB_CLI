@@ -91,8 +91,8 @@ gemini_api="AIzaSyD...Key1, AIzaSyD...Key2"
 
 ```
 
-### **Note:
- If you are having trouble changing the filename, you can try the same using CLI -
+### Note:
+If you are having trouble changing the filename, you can try the same using CLI -
 
 
 **Linux & Android (Termux):**
