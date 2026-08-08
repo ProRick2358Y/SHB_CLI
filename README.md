@@ -91,6 +91,24 @@ gemini_api="AIzaSyD...Key1, AIzaSyD...Key2"
 
 ```
 
+> **Note:** 
+> If you are having trouble changing the filename, you can try the same using CLI -
+
+**Linux & Android (Termux):**
+```bash
+mv .env.example .env
+```
+
+**Windows (Command Prompt):**
+```cmd
+ren .env.example .env
+```
+
+**Windows (PowerShell):**
+```powershell
+Rename-Item .env.example .env
+```
+
 ---
 
 ## Linux Installation
