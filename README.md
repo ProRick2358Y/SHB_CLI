@@ -68,16 +68,15 @@ cd SHB_CLI
 
 ---
 
-## Existing Project
+## Barebones
 
-If you already have the project files instead of cloning the repository, ensure the following files are present in the project directory:
+If you just want to get the project to work without cloning the repository, just ensure these 4 files are present in the root directory of the bot.
 
-```
-.env
-app.py
-constitution.md
-requirements.txt
-```
+```markdown
+* `.env` — Environment variables and API keys
+* `app.py` — Main application script
+* `constitution.md` — **The core system prompt** defining the bot's behavior and constraints
+* `requirements.txt` — Project dependencies
 
 ---
 
@@ -238,13 +237,9 @@ Skip virtual environment creation.
 
 ```bash
 pkg update && pkg upgrade
-
 pkg install binutils python-pip rust build-essential openssl libffi
-
 pip install --upgrade pip setuptools wheel
-
 pkg install python-cryptography
-
 export ANDROID_API_LEVEL=24
 export CARGO_BUILD_TARGET=aarch64-linux-android
 ```
