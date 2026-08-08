@@ -72,11 +72,10 @@ cd SHB_CLI
 
 If you just want to get the project to work without cloning the repository, just ensure these 4 files are present in the root directory of the bot.
 
-```markdown
-* `.env` — Environment variables and API keys
-* `app.py` — Main application script
-* `constitution.md` — **The core system prompt** defining the bot's behavior and constraints
-* `requirements.txt` — Project dependencies
+* `.env` — API keys
+* `app.py` — The Main Code
+* `constitution.md` — **The core system prompt** defining the bot's personality
+* `requirements.txt` — Dependencies
 
 ---
 
