@@ -13,7 +13,7 @@ from google.genai import types
 from rich.console import Console
 from rich.markdown import Markdown
 from prompt_toolkit import PromptSession
-model_name = "gemini-3.5-flash"
+model_name = "gemini-3.5-flash-lite"
 
 load_dotenv()
 
